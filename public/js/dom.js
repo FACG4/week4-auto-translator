@@ -3,9 +3,6 @@ const wordList = document.querySelector('#wordList');
 var send1 = document.getElementById('send');
 var results  = document.getElementById('result');
 
-
-
-
 input.addEventListener('keyup', () => {
   fetch(input.value.toLowerCase(), render);
 });
@@ -16,12 +13,9 @@ input.addEventListener('keyup', () => {
 
 function fetch(str, cb) {
   const xhr = new XMLHttpRequest;
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState === 4 && xhr.status === 200) {
-      console.log(xhr.responseText);
-
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
       const data = JSON.parse(xhr.responseText);
-      console.log(data);
       cb(data);
     }
   }
