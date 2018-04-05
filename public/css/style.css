@@ -33,8 +33,13 @@ body{
   color: white;
   background-color: #bd4297;
   width: 80px;
-
 }
+
+.button:hover{
+  background-color:#eca7d7;
+  color: black;
+}
+
 
 
 
