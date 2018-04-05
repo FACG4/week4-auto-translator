@@ -1,0 +1,50 @@
+body{
+  background-image: url('https://wallpapertag.com/wallpaper/full/3/a/8/85216-widescreen-book-background-1920x1200-for-retina.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.container {
+    width: 80%;
+    color: #bd4297;
+    padding-left: 50px;
+
+}
+
+
+.title{
+  padding-top: 20px;
+  font-size: 50px;
+}
+
+
+.input{
+  border-color: #eca7d7;
+  border-radius: 5px;
+  height: 20px;
+  width: 200px;
+}
+
+
+.button{
+  height: 30px;
+  border-radius: 5px;
+  color: white;
+  background-color: #bd4297;
+  width: 80px;
+
+}
+
+
+
+.p1{
+width: 510px;
+  color: #471e3a;
+font-size: 18px;
+}
+
+
+.myDiv{
+  padding-left: 100px;
+}

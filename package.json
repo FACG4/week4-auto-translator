@@ -1,0 +1,28 @@
+{
+  "name": "week4-auto-translatorv2.0.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape ./test/test.js | tap-spec",
+    "start": "node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACG4/week4-auto-translator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACG4/week4-auto-translator/issues"
+  },
+  "homepage": "https://github.com/FACG4/week4-auto-translator#readme",
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.9.0"
+  }
+}
