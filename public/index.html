@@ -2,36 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Translator</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Translator</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div id="searchBox" class="search-box">
-            <h2 class="title">Pick a word</h2>
-            <div>
-                <form id="form" action="/search" method="POST">
-                    <label for=""></label>
-                    <input id="searchQuery"type="text" list='list' placeholder="Enter a word">
-                    <div id="wordList" class="words-list">
-                        <datalist id="oldList">
+  <div class="container">
+    <div id="searchBox" class="search-box">
+      <h2 class="title">Pick a word</h2>
+      <div>
+        <!-- <form id="form" action="/search" method="POST"> -->
+        <label for=""></label>
+        <input id="searchQuery" type="text" list='list' placeholder="Enter a word">
+        <div id="wordList" class="words-list">
+          <datalist id="oldList">
 
-                        </datalist>
-                    </div>
-                </form>
-            </div>
+          </datalist>
         </div>
-
-        <div id="info" class="info">
-
-        </div>
+        <!-- </form> -->
+      </div>
     </div>
-    <script src="./js/logic.js"></script>
-    <script src="./js/dom.js"></script>
+
+    <div id="info" class="info">
+
+    </div>
+  </div>
+  <script src="./js/logic.js"></script>
+  <script src="./js/dom.js"></script>
 </body>
 
 </html>

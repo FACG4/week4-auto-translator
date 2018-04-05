@@ -1,21 +1,15 @@
 const input = document.querySelector('#searchQuery');
 const wordList = document.querySelector('#wordList');
 
-
-
-
-input.addEventListener('keyup', () => {  
+input.addEventListener('keyup', () => {
   fetch(input.value.toLowerCase(), render);
 });
 
 function fetch(str, cb) {
   const xhr = new XMLHttpRequest;
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState === 4 && xhr.status === 200) {
-      console.log(xhr.responseText);
-      
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
       const data = JSON.parse(xhr.responseText);
-      console.log(data);
       cb(data);
     }
   }

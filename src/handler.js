@@ -2,13 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const {matchedWords} = require('./serverLogic.js');
 
-
-// const words = require('./words.json');
-
-// const matchedWords = (searchWord) => {
-//     return Object.keys(words).filter((word) => word.startsWith(searchWord)).slice(0,10)
-// }
-
 let rootPath = path.join(__dirname, '../');
 
 const handler = (req, res) => {
@@ -32,9 +25,7 @@ const handler = (req, res) => {
     } else if (url === '/js/dom.js') {
       readFiles(rootPath + 'public/js/dom.js', 'text/javascript');
     } else if (url === '/search') {
-      // res.writeHead(302, {Location: '/'});
-      console.log('wadia');
-      
+      // res.writeHead(302, {Location: '/'});      
       res.writeHead(200, {'Content-Type': 'application/json'});
       let allData = '';
         req.on('data', (chunk) => {
