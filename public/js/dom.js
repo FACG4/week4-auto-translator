@@ -39,7 +39,7 @@ translateBtn.addEventListener('click', function (e) {
   const myUrl2 = 'https://cors-anywhere.herokuapp.com/http://api.wordnik.com:80/v4/word.json/' + input.value + '/audio?useCanonical=false&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5';
 
   fetch('GET', myUrl1, null, function (res) {
-    if(res[0]==='undefined' || input.value.length === 0) {
+    if(res[0]==='undefined') {
       alert('Unavailable Translation');
       return;
     }
