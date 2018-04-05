@@ -38,8 +38,9 @@ translateBtn.addEventListener('click', function (e) {
   const myUrl1 = 'https://cors-anywhere.herokuapp.com/http://api.wordnik.com/v4/word.json/' + input.value + '/definitions?limit=1&partOfSpeech=noun&includeRelated=true&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5';
   const myUrl2 = 'https://cors-anywhere.herokuapp.com/http://api.wordnik.com:80/v4/word.json/' + input.value + '/audio?useCanonical=false&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5';
 
+  // e.preventDefault();
   fetch('GET', myUrl1, null, function (res) {
-    if(res[0]==='undefined') {
+    if(res[0].text.length === 0) {
       alert('Unavailable Translation');
       return;
     }
