@@ -1,11 +1,13 @@
 const fs = require('fs');
 const path = require('path');
-const words = require('./words.json');
-// const queryString = require('querystring');
+const {matchedWords} = require('./serverLogic.js');
 
-const matchedWords = (searchWord) => {
-    return Object.keys(words).filter((word) => word.startsWith(searchWord)).slice(0,10)
-}
+
+// const words = require('./words.json');
+
+// const matchedWords = (searchWord) => {
+//     return Object.keys(words).filter((word) => word.startsWith(searchWord)).slice(0,10)
+// }
 
 let rootPath = path.join(__dirname, '../');
 
@@ -31,16 +33,15 @@ const handler = (req, res) => {
       readFiles(rootPath + 'public/js/dom.js', 'text/javascript');
     } else if (url === '/search') {
       // res.writeHead(302, {Location: '/'});
+      console.log('wadia');
+      
       res.writeHead(200, {'Content-Type': 'application/json'});
       let allData = '';
         req.on('data', (chunk) => {
             allData += chunk;            
         });
         req.on('end', () => {
-            // const convertedData = queryString.parse(allData);
-            // console.log(convertedData);
             const list = matchedWords(allData);
-            console.log(allData);           
             res.end(JSON.stringify(list));
         })
     }
