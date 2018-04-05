@@ -11,22 +11,32 @@
 
 <body>
   <div class="container">
+    <h1 class="title">VOCAL DICTIONARY</h1>
     <div id="searchBox" class="search-box">
-      <h2 class="title">Pick a word</h2>
       <div>
-        <!-- <form id="form" action="/search" method="POST"> -->
-        <label for=""></label>
-        <input id="searchQuery" type="text" list='list' placeholder="Enter a word">
-        <div id="wordList" class="words-list">
-          <datalist id="oldList">
+        <form id="form" action="/search" method="POST">
+          <label for=""></label>
+
+          <div class="myDiv">
+
+
+            <input id="searchQuery" type="text" list='list' placeholder="  Enter a word.." class="input">
+            <input type="button" name="send" value="send" id="send" class="button">
+          </div>
+
+
+
+          <div id="wordList" class="words-list">
+            <datalist id="oldList">
 
           </datalist>
-        </div>
-        <!-- </form> -->
+          </div>
+          <!-- </form> -->
       </div>
     </div>
 
-    <div id="info" class="info">
+
+    <div id="result">
 
     </div>
   </div>
