@@ -14,13 +14,13 @@
         <div id="searchBox" class="search-box">
             <h2 class="title">Pick a word</h2>
             <div>
-                <form action="">
+                <form id="form" action="/search" method="POST">
                     <label for=""></label>
-                    <input type="text" placeholder="Enter a word">
-                    <div id="">
-                        <ul id="wordList" class="words-list">
-    
-                        </ul>
+                    <input id="searchQuery"type="text" list='list' placeholder="Enter a word">
+                    <div id="wordList" class="words-list">
+                        <datalist id="oldList">
+
+                        </datalist>
                     </div>
                 </form>
             </div>
@@ -30,6 +30,8 @@
 
         </div>
     </div>
+    <script src="./js/logic.js"></script>
+    <script src="./js/dom.js"></script>
 </body>
 
 </html>
